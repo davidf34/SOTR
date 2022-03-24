@@ -55,7 +55,7 @@ u16 Queue_Dequeue (T_QUEUE_HANDLER_PTR Queue, T_QUEUE_ELEMENT_PTR Element)
 	u16 Res = QUEUE_ERR_NULL;
 	if ( Queue && Element ) {
 		if (Queue -> Head) {
-		*Element = (Queue -> Head);
+		*Element = Queue->Head;
 		Queue -> Count--;
 		if (Queue -> Head == Queue -> Tail) {
 			Queue -> Head = NULL;
@@ -65,7 +65,7 @@ u16 Queue_Dequeue (T_QUEUE_HANDLER_PTR Queue, T_QUEUE_ELEMENT_PTR Element)
 		{
 			Queue -> Head = Queue -> Head -> Next;
 		}
-		Res = Queue_OK;
+		Res = QUEUE_OK;
 		}
 	}
 
