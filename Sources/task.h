@@ -25,7 +25,7 @@ typedef enum{
 	RUNNING = 0,
 	READY,
 	BLOCKED
-}TaskStatus,* _PTR_TaskStatus_PTR;
+}TaskStatus,* TaskStatus_PTR;
 
 
 typedef struct{
@@ -40,6 +40,7 @@ typedef struct{
 	u16	TaskStackSize;
 	u16	TaskActualStack;
 	u16	TaskSleepTime;
+	u16 TaskActualTask;
 	
 }T_TCB,* T_TCB_PTR;
 

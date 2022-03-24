@@ -9,6 +9,7 @@
 #define SCHEDULLER_H_
 
 #include "AppTypes.h"
+#include "task.h"
 
 #define SCHEDULLER_OK			0
 #define	SCHEDULLER_ERROR_UNKNOW						SCHEDULLER_BASE_ERROR | BASE_ERROR_UNKNOW
