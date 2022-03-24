@@ -7,6 +7,7 @@
 #include "AppTypes.h"
 #include "RTOS.h"
 #include "scheduller.h"
+#include "task.h"
 
 T_TCB	IdleTaskHandler;
 u8		IdleTaskStack[RTOS_IDLE_TASK_STACK_SIZE];
