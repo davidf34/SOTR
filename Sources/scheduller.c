@@ -1,6 +1,6 @@
 /*
  * 
- * Inclusión de librerias
+ * Inclusiï¿½n de librerias
  * 
  */
 #include "AppTypes.h"
@@ -16,15 +16,15 @@
  */
 
 extern T_TCB IdleTaskHandler;
-T_QUEUE_HANDLER ReadyTaskList(RTOS_SYSTEM_PRIORITIES);
+T_QUEUE_HANDLER ReadyTaskList[RTOS_SYSTEM_PRIORITIES];
 
 
 /*
  * Nombre		:Scheduller_Coperative
- * Descripción	:Función encargada de buscar la siguiente tarea a ser 
+ * Descripciï¿½n	:Funciï¿½n encargada de buscar la siguiente tarea a ser 
  * 				ejecutada y guardar el SP de la tarea que se estaba 
  * 				ejecutando.
- * Parámetros	:ActualStackSP - SP de la tarea actual en ejecución
+ * Parï¿½metros	:ActualStackSP - SP de la tarea actual en ejecuciï¿½n
  * Retonro		:u16 - El SP de la tarea que se va ejecutar
  * 
  */
@@ -32,7 +32,7 @@ u16 Scheduller_Init(void){
 	u16 Res = SCHEDULLER_OK;
 	u16 Count;
 	for(Count = 0;Count < RTOS_SYSTEM_PRIORITIES; Count++){
-		Res = Queue_Init(&ReadyTaskList(Count));
+		Res = Queue_Init(&ReadyTaskList[Count]);
 		if(Res != QUEUE_OK){
 			break;
 		}
@@ -53,7 +53,7 @@ u16 Scheduller_Coperative(u16 ActualTaskSP){
     		Task ->TaskActualStack = ActualTaskSP;
     	}
         if(Task != &IdleTaskHandler){
-			if(Task->Status == RUNNING){ //si la tarea está en running	
+			if(Task->Status == RUNNING){ //si la tarea estï¿½ en running	
 				Res = Scheduller_SetTaskToReadyQueue(Task);//Se pone la tarea que ya esta lista para ejecutarse
 				}
         }
@@ -69,7 +69,7 @@ u16 Scheduller_Coperative(u16 ActualTaskSP){
             //se saca, se manda el handler de la cola donde se quiere desencolar
             Res = Queue_Dequeue(&ReadyTaskList[Count], &Element);
             if(Res == QUEUE_OK){
-                if(Element != NULL){//SI LOGRÓ DESENCOLAR, EL APUNTADOR DE ELEMENTO SERA DIFERENTE A NULO 
+                if(Element != NULL){//SI LOGRï¿½ DESENCOLAR, EL APUNTADOR DE ELEMENTO SERA DIFERENTE A NULO 
                     Task = Element -> Data;//saca el TCB de la tarea y rompe el ciclo
                     break;
                 	} 
@@ -81,7 +81,7 @@ u16 Scheduller_Coperative(u16 ActualTaskSP){
         
     	Task = &IdleTaskHandler; 
     }
-    Task -> Status = RUNNING; //pasa a estado de ejecución
+    Task -> Status = RUNNING; //pasa a estado de ejecuciï¿½n
     Task_SetActualTask(Task);
     //se debe encontrar el stackpointer
     return Task->TaskActualStack;
