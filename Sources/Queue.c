@@ -8,7 +8,7 @@ u16 Queue_init (T_QUEUE_HANDLER_PTR Queue)
 			Queue -> Count = 0;
 			Queue -> Head = NULL;
 			Queue -> Tail = NULL;
-			Res = Queue_OK;
+			Res = QUEUE_OK;
 		}
 	return Res;
 	}
@@ -20,7 +20,7 @@ u16 Queue_GET_Count (T_QUEUE_HANDLER_PTR Queue)
 			}
 			return 0;
 	}
-u16 Queue_Enqueue (T_QUEUE_HANDLER_PTR Queue, T_Queue_Element_PTR Element)
+u16 Queue_Enqueue (T_QUEUE_HANDLER_PTR Queue, T_QUEUE_ELEMENT_PTR Element)
 	{
 	u16 Res = Queue_ERROR_NULL_PARAM;
 	Portable_DisableInterrupts();
