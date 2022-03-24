@@ -41,7 +41,7 @@ typedef struct{
 	u16	TaskActualStack;
 	u16	TaskSleepTime;
 	
-}T_TCB,_PTR_T_TCB_PTR;
+}T_TCB,* T_TCB_PTR;
 
 /**
  * 
