@@ -1,0 +1,8 @@
+INFORMATION C66: Search path D:/OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO/2022-1/SOTR/pruebas/Proyecto/Project_Headers does not exist
+D:/OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO/2022-1/SOTR/pruebas/Proyecto/Project_Headers\../Sources\scheduller.c:6:error:C5200 AppTypes.h file not found
+INFORMATION C66: Search path D:/OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO/2022-1/SOTR/pruebas/Proyecto/Project_Headers does not exist
+D:/OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO/2022-1/SOTR/pruebas/Proyecto/Project_Headers\../Sources\scheduller.c:7:error:C5200 scheduller.h file not found
+INFORMATION C66: Search path D:/OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO/2022-1/SOTR/pruebas/Proyecto/Project_Headers does not exist
+D:/OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO/2022-1/SOTR/pruebas/Proyecto/Project_Headers\../Sources\scheduller.c:8:error:C5200 Queue.h file not found
+INFORMATION C66: Search path D:/OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO/2022-1/SOTR/pruebas/Proyecto/Project_Headers does not exist
+D:/OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO/2022-1/SOTR/pruebas/Proyecto/Project_Headers\../Sources\scheduller.c:9:error:C5200 RTOS.h file not found
