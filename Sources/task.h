@@ -25,7 +25,7 @@ typedef enum{
 	RUNNING = 0,
 	READY,
 	BLOCKED
-}TaskStatus,_PTR_TaskStatus_PTR;
+}TaskStatus,* _PTR_TaskStatus_PTR;
 
 
 typedef struct{
