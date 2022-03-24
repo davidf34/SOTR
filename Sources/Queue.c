@@ -22,7 +22,7 @@ u16 Queue_GET_Count (T_QUEUE_HANDLER_PTR Queue)
 	}
 u16 Queue_Enqueue (T_QUEUE_HANDLER_PTR Queue, T_QUEUE_ELEMENT_PTR Element)
 	{
-	u16 Res = Queue_ERROR_NULL_PARAM;
+	u16 Res = QUEUE_ERROR_NULL_PARAM;
 	Portable_DisableInterrupts();
 	if ((Queue)&&(Element))
 		{
@@ -50,7 +50,7 @@ u16 Queue_Enqueue (T_QUEUE_HANDLER_PTR Queue, T_QUEUE_ELEMENT_PTR Element)
 	return Res;
 	}
 
-u16 Queue_Dequeue (T_QUEUE_HANDLER_PTR Queue, T_QUEUE_ELEMENT_PTR Element)
+u16 Queue_Dequeue (T_QUEUE_HANDLER_PTR Queue, T_QUEUE_ELEMENT_PTR * Element)
 	{
 	u16 Res = QUEUE_ERR_NULL;
 	if ( Queue && Element ) {
