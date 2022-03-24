@@ -2,7 +2,7 @@
 #include "AppTypes.h"
 u16 Queue_init (T_QUEUE_HANDLER_PTR Queue)
 	{
-	u16 Res = Queue_ERR_NULL;
+	u16 Res = QUEUE_ERR_NULL;
 	if (Queue)
 		{
 			Queue -> Count = 0;
