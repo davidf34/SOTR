@@ -94,7 +94,7 @@ u16 Scheduller_SetTaskToReadyQueue(T_TCB_PTR Task){
         Task ->Status = READY;
         if(Task->TaskPriority< RTOS_SYSTEM_PRIORITIES){
             Task -> TaskQueueElement.Data = Task;
-            Task -> TaskQueueElement.Data = NULL;
+            Task -> TaskQueueElement.Next = NULL;
             Res  = Queue_Enqueue (&ReadyTaskList[Task->TaskPriority], &Task->TaskQueueElement);
         }
         else{
